@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yom_gupta</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold" style="color: rgb(148, 91, 202)"> &lt/&gt Yom_gupta</h1>
+            <ul class="flex space-x-4">
+                <li><a href="#portfolio" class="hover:underline">Portfolio</a></li>
+                <li><a href="#resources" class="hover:underline">Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-24 flex items-center">
+        <div class="container mx-auto flex items-center">
+            <!-- Text Typing Effect -->
+            <div class="w-1/2 pr-8">
+                <h1 class="text-4xl font-bold text-black">
+                   Hi, I'm <span style="color: rgb(148, 91, 202)">Rishabh Gupta</span>
+                    <br>
+                    I am a passionate
+                    <span id="typing-effect" class="text-4xl font-bold" style="color: rgb(148, 91, 202)"></span>
+                </h1>
+            </div>
+
+            <!-- Image (Replace 'your-image.jpg' with your image URL) -->
+            <div class="w-1/2">
+                <img src="your-image.png" alt="Your Image" >
+            </div>
+        </div>
+       
+    </section>
+<hr style="border-color: rgb(148, 91, 202);">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-12">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold">Portfolio</h2>
+            <!-- Your projects go here -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                <!-- Example project card -->
+                <div class="bg-white rounded-lg shadow-lg p-4">
+                    <h3 class="text-xl font-semibold">Project Name</h3>
+                    <p class="text-gray-700 mt-2">Description of your project.</p>
+                    <a href="#" class="mt-4 text-blue-500 hover:underline">View Project</a>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="bg-gray-200 py-12">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold">Resources</h2>
+            <!-- Your study resources go here -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                <!-- Example resource card -->
+                <div class="bg-white rounded-lg shadow-lg p-4">
+                    <h3 class="text-xl font-semibold">Resource Title</h3>
+                    <p class="text-gray-700 mt-2">Description of the resource.</p>
+                    <a href="#" class="mt-4 text-blue-500 hover:underline">View Resource</a>
+                </div>
+                <!-- Add more resource cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 Your ITK</p>
+        </div>
+    </footer>
+
+    <!-- Typing Effect Script -->
+    <script>
+        const typingEffect = document.getElementById('typing-effect');
+        const words = ['coder', 'artist', 'gamer', 'student'];
+        let wordIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < words[wordIndex].length) {
+                typingEffect.textContent += words[wordIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 100);
+            } else {
+                setTimeout(erase, 1000);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                typingEffect.textContent = words[wordIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, 50);
+            } else {
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(type, 1000);
+            }
+        }
+
+        type();
+    </script>
+</body>
+</html>
