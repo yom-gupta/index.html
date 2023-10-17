@@ -10,51 +10,54 @@
         .dark-mode-button {
             cursor: pointer;
         }
-    
+
         /* Styles for dark mode */
         body.dark {
             background-color: #121212; /* Dark background color */
             color: #ffffff; /* Light text color */
         }
-    
+
         /* Style for dark mode button when active */
         body.dark .dark-mode-button {
             color: #ffffff; /* Light color for the moon icon */
         }
-    </style>
+        .project-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    margin: 10px;
+}
+.project{
+    display: flex;
+    flex-direction: row;
+    background: #000;
+    padding: 10px;
+}
 
+    </style>
 </head>
 <body class="bg-gray-100 font-sans">
-    <!-- Navigation
-    <nav class="bg-gray-800 text-white py-4">
+    <!-- Navigation -->
+    <nav style="background: rgb(22, 22, 22); box-shadow: 2px 2px 2px white" class="text-white py-4">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-2xl font-bold" style="color: rgb(148, 91, 202)"> &lt/&gt Yom_gupta</h1>
             <ul class="flex space-x-4">
                 <li><a href="#portfolio" class="hover:underline">Portfolio</a></li>
                 <li><a href="#resources" class="hover:underline">Resources</a></li>
-            </ul>
-        </div>
-    </nav> -->
-      <!-- Navigation -->
-      <nav style="background:rgb(22, 22, 22); box-shadow:2px 2px 2px white" class=" text-white py-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold" style="color: rgb(148, 91, 202)"> &lt/&gt Yom_gupta</h1>
-            <ul class="flex space-x-4">
-                <li><a href="#portfolio" class="hover:underline">Portfolio</a></li>
-                <li><a href="#resources" class="hover:underline">Resources</a></li>
-                <li id="dark-mode-toggle" class="dark-mode-button"><img src="dark.png" style="height:34px;"></li>
+                <li id="dark-mode-toggle" class="dark-mode-button"><img src="dark.png" style="height: 34px;"></li>
             </ul>
         </div>
     </nav>
 
-
     <!-- Hero Section -->
     <section class="py-24 flex items-center">
-        <div class="container mx-auto flex items-center" style="height:40rem">
+        <div class="container mx-auto flex items-center" style="height: 40rem">
             <!-- Text Typing Effect -->
-            <div class="w-1/2 pr-8" style="margin:50px;">
+            <div class="w-1/2 pr-8" style="margin: 50px;">
                 <h1 class="text-4xl font-bold">
-                   Hi, I'm <span style="color: rgb(148, 91, 202)">Rishabh Gupta</span>
+                    Hi, I'm <span style="color: rgb(148, 91, 202)">Rishabh Gupta</span>
                     <br>
                     I am a passionate
                     <span id="typing-effect" class="text-4xl font-bold" style="color: rgb(148, 91, 202)"></span>
@@ -63,36 +66,66 @@
 
             <!-- Image (Replace 'your-image.jpg' with your image URL) -->
             <div class="w-1/2">
-                <img src="your-image.png" alt="Your Image" >
+                <img src="your-image.png" alt="Your Image">
             </div>
         </div>
-       
     </section>
-<hr style="border-color: rgb(148, 91, 202);">
+    <hr style="border-color: rgb(148, 91, 202);">
+
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-12" style="margin:20px;"> 
-        <div class="container mx-auto">
-            <iframe src="" frameborder="0"></iframe>
-            <h2 class="text-2xl font-semibold">Portfolio</h2>
-            <!-- Your projects go here -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-                <!-- Example project card -->
-                <div class="bg-white rounded-lg shadow-lg p-4">
-                    <h3 class="text-xl font-semibold">Project Name</h3>
-                    <p class="text-gray-700 mt-2">Description of your project.</p>
-                    <a href="#" class="mt-4 text-blue-500 hover:underline">View Project</a>
-                </div>
-                <!-- Add more project cards as needed -->
+  <!-- Portfolio Section -->
+<section id="portfolio" class="py-12" style="margin: 20px;">
+    <div class="container mx-auto">
+        <h2 class="text-2xl font-semibold">Portfolio</h2>
+        <!-- Your projects go here -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6" style="color: #000;">
+            <!-- Example project card -->
+            <div class="project-card">
+                <a class="media-figure tw-screenshot undefined" target="_blank" rel="noopener noreferrer" aria-describedby="open-in-new-tab" href="https://school-hub.netlify.app" title="Go to site school-hub">
+                    <picture class="tw-m-0 tw-p-0 tw-block tw-w-full tw-align-middle tw-max-w-full tw-h-auto">
+                        <source srcset="https://screenshot-proxy.netlify.app/f_avif,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/652bf72e412cb37b4649ed87/screenshot_2023-10-15-14-29-04-0000.png" type="image/avif">
+                        <source srcset="https://screenshot-proxy.netlify.app/f_webp,fit_cover,s_336x210/https/d33wubrfki0l68.cloudfront.net/652bf72e412cb37b4649ed87/screenshot_2023-10-15-14-29-04-0000.png" type="image/webp">
+                        <img src="https://screenshot-proxy.netlify.app/f_jpg,fit_cover,s_336x210/https://d33wubrfki0l68.cloudfront.net/652bf72e412cb37b4649ed87/screenshot_2023-10-15-14-29-04-0000.png" alt="" loading="lazy" class="tw-align-top tw-h-full tw-w-full">
+                    </picture>
+                </a>
+                <h3 class="text-xl font-semibold">SchoolHub</h3>
+                <p class="text-gray-700 mt-2">The Ultimate School Management and Communication Platform.</p>
+                <a href="https://school-hub.netlify.app" class="mt-4 text-blue-500 hover:underline">View Project</a>
             </div>
+
+            <!-- Add more project cards as needed -->
+
+            <div class="project-card">
+                <a class="media-figure tw-screenshot undefined" target="_blank" rel="noopener noreferrer" aria-describedby="open-in-new-tab" href="https://yom-gupta.github.io/work/" title="Go to site school-hub">
+                   <img src="work.png" alt="">
+                </a>
+                <h3 class="text-xl font-semibold">Global Staffing Solutions</h3>
+                <p class="text-gray-700 mt-2">Connecting top talent with the right opportunities worldwide.</p>
+                <a href="https://yom-gupta.github.io/work/" class="mt-4 text-blue-500 hover:underline">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <a class="media-figure tw-screenshot undefined" target="_blank" rel="noopener noreferrer" aria-describedby="open-in-new-tab" href="https://yom-gupta.github.io/yom/java2" title="Go to site school-hub">
+                   <img src="calculater.png" alt="">
+                </a>
+                <h3 class="text-xl font-semibold">Simple Calculator</h3>
+                <p class="text-gray-700 mt-2">Basic calculators can do only add+, sub-, mul* and div/ mathematical calculations.</p>
+                <a href="https://yom-gupta.github.io/yom/java2" class="mt-4 text-blue-500 hover:underline">View Project</a>
+            </div>
+            
+
+
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Resources Section -->
-    <section id="resources" class=" py-12" style="margin:20px;">
+    <section id="resources" class="py-12" style="margin: 20px;">
         <div class="container mx-auto">
             <h2 class="text-2xl font-semibold">Resources</h2>
             <!-- Your study resources go here -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            <div  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
                 <!-- Example resource card -->
                 <div class="bg-white rounded-lg shadow-lg p-4">
                     <h3 class="text-xl font-semibold">Resource Title</h3>
@@ -114,7 +147,7 @@
     <!-- Typing Effect Script -->
     <script>
         const typingEffect = document.getElementById('typing-effect');
-        const words = ['codeing', 'painting', 'gamaing', 'studyes','health and fitness'];
+        const words = ['coding', 'painting', 'gaming', 'studies', 'health and fitness'];
         let wordIndex = 0;
         let charIndex = 0;
 
@@ -140,7 +173,7 @@
         }
 
         type();
-   
+
         // Dark mode toggle script
         const darkModeToggle = document.getElementById('dark-mode-toggle');
         const body = document.body;
