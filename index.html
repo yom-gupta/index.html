@@ -21,6 +21,15 @@
         body.dark .dark-mode-button {
             color: #ffffff; /* Light color for the moon icon */
         }
+        #About p{
+            color: #575757;
+        }
+       .project-card:hover{
+        width: 250px;
+       transition: all 1s ;
+        background: #ffffffea;
+        box-shadow: 2px 2px 22px rgb(187, 187, 187);
+       }
         .project-card {
     background-color: white;
     border-radius: 8px;
@@ -40,12 +49,13 @@
 </head>
 <body class="bg-gray-100 font-sans">
     <!-- Navigation -->
-    <nav style="background: rgb(22, 22, 22); box-shadow: 2px 2px 2px white" class="text-white py-4">
+    <nav style="background: rgb(22, 22, 22); box-shadow: 2px 2px 2px white; padding: 10px;" class="text-white py-4">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold" style="color: rgb(148, 91, 202)"> &lt/&gt Yom_gupta</h1>
+            <h1 class="text-2xl font-bold" style="color: rgb(159, 108, 207)"> &lt/&gt Yom_gupta</h1>
             <ul class="flex space-x-4">
                 <li><a href="#portfolio" class="hover:underline">Portfolio</a></li>
                 <li><a href="#resources" class="hover:underline">Resources</a></li>
+                <li><a href="#About" class="hover:underline">About</a></li>
                 <li id="dark-mode-toggle" class="dark-mode-button"><img src="dark.png" style="height: 34px;"></li>
             </ul>
         </div>
@@ -53,7 +63,7 @@
 
     <!-- Hero Section -->
     <section class="py-24 flex items-center">
-        <div class="container mx-auto flex items-center" style="height: 40rem">
+        <div class="container mx-auto flex items-center" style="height: 25rem">
             <!-- Text Typing Effect -->
             <div class="w-1/2 pr-8" style="margin: 50px;">
                 <h1 class="text-4xl font-bold">
@@ -66,7 +76,7 @@
 
             <!-- Image (Replace 'your-image.jpg' with your image URL) -->
             <div class="w-1/2">
-                <img src="your-image.png" alt="Your Image">
+                <img src="your-image.png" alt="Your Image" >
             </div>
         </div>
     </section>
@@ -112,7 +122,7 @@
                 <p class="text-gray-700 mt-2">Basic calculators can do only add+, sub-, mul* and div/ mathematical calculations.</p>
                 <a href="https://yom-gupta.github.io/yom/java2" class="mt-4 text-blue-500 hover:underline">View Project</a>
             </div>
-            
+
 
 
         </div>
@@ -136,16 +146,16 @@
             </div>
         </div>
     </section>
-<hr>
-    <!-- About Section -->
-<section class="py-12" style="margin: 20px;">
+    <hr>
+<!-- About Section -->
+<section class="py-12" id="About" style="margin: 20px;">
     <div class="container mx-auto text-center">
         <h2 class="text-2xl font-semibold">About Me</h2>
         <div class="mx-auto" style="max-width: 800px;">
-            <p class="text-gray-700 mt-4">
+            <p class="mt-4">
                 Hi, I'm a passionate student currently studying in the 10th class. I have a deep love for coding and enjoy creating web applications. My skills include HTML, CSS, and JavaScript. I've also dabbled in Tailwind CSS to create responsive and stylish web designs.
             </p>
-            <p class="text-gray-700 mt-4">
+            <p class=" mt-4">
                 Coding isn't just a hobby for me; it's a creative outlet that allows me to turn my ideas into reality. I'm constantly learning and exploring new technologies to improve my web development skills. If you're looking for a dedicated and enthusiastic web developer, you're in the right place!
             </p>
         </div>
